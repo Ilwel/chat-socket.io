@@ -7,7 +7,8 @@ const app = new Koa();
 const server = http.createServer(app.callback());
 const io = socket(server, {
   cors: {
-    origin: '*'
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"]
   }
 });
 
