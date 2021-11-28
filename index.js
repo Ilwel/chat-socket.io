@@ -7,7 +7,7 @@ const app = new Koa();
 const server = http.createServer(app.callback());
 const io = socket(server, {
   cors: {
-    origins: ["http://localhost:3000", "https://chat-socket-io-front.netlify.app"],
+    origin: "https://chat-socket-io-front.netlify.app",
     methods: ["GET", "POST"]
   }
 });
